@@ -8,4 +8,3 @@ function saveData(){
     localStorage.setItem("email",email);
     localStorage.setItem("psw",psw);
 }
-
