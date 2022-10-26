@@ -6,10 +6,13 @@ function saveData(){
 
 //Form data Collect & Store [Array Create]
     let user_records = new Array();
+    user_records = JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[];
 
-
-
-    localStorage.setItem("name",name);
-    localStorage.setItem("email",email);
-    localStorage.setItem("psw",psw);
+    user_records.push({
+        "name":name,
+        "email":email,
+        "psw":psw
+    })
+    localStorage.setItem("users",JSON.stringify(user_records));
+    
 }
