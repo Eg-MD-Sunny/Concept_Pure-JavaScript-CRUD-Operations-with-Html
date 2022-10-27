@@ -10,11 +10,11 @@ function saveData(){
 
 
 //Email Velidation
-    if(user_records.some((v)=>{
-        return v.email===email
-    })){
-        alert('Alreadt Registed')
-    }else{
+    if(user_records.some((v)=>{return v.email==email}))
+    {
+        alert('Already Registed')
+    }
+    else{
         user_records.push({
             "name":name,
             "email":email,
